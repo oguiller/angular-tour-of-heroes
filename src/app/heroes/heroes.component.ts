@@ -12,13 +12,7 @@ import { HeroService } from '../hero.service';
 })
 export class HeroesComponent implements OnInit {
 
-  selectedHero: Hero;
   heroes: Hero[];
-
-  hero: Hero = {
-    id: 1,
-    name: 'WindStorm'
-  };
 
   constructor(private heroService : HeroService) {
      // Reserve the constructor for simple initialization such as wiring constructor parameters to properties.
@@ -39,10 +33,6 @@ export class HeroesComponent implements OnInit {
   // The ngOnInit is a lifecycle hook. Angular calls ngOnInit shortly after creating a component. It's a good place to put initialization logic.
   ngOnInit() {
     this.getHeroes();
-  }
-
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
   }
 
 }
